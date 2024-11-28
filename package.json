@@ -1,0 +1,16 @@
+{
+	"name": "@ell/monorepo",
+	"version": "1.0.0",
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"build": "pnpm --filter \"./packages/**\" run build",
+		"clean": "pnpm --filter=@ell/* run clean",
+		"format": "pnpm biome format --write ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"rimraf": "^6.0.1",
+		"tsup": "^8.3.5",
+		"tsx": "^4.19.2"
+	}
+}

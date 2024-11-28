@@ -1,0 +1,23 @@
+{
+	"name": "@ell/package-a",
+	"version": "1.0.0",
+	"type": "module",
+	"source": "./src/index.ts",
+	"types": "./dist/index.d.ts",
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": ["dist"],
+	"scripts": {
+		"build": "tsup --config ../../tsup.config.ts",
+		"clean": "rimraf dist && rimraf node_modules"
+	},
+	"devDependencies": {
+		"typescript": "^5.7.2"
+	}
+}

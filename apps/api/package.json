@@ -1,0 +1,16 @@
+{
+	"name": "@ell/api",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "tsc ./src/index.ts",
+		"dev": "tsx ./src/index.ts",
+		"clean": "rimraf dist && rimraf node_modules"
+	},
+	"dependencies": {
+		"@ell/package-a": "workspace:^",
+		"@ell/package-b": "workspace:^"
+	},
+	"devDependencies": {
+		"typescript": "^5.7.2"
+	}
+}
